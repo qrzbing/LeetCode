@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include <string>
+
 // stack
 #include <stack>
 
