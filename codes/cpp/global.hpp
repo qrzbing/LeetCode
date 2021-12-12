@@ -5,6 +5,9 @@
 
 #include <string>
 
+#include <vector>
+#include <array>
+
 // stack
 #include <stack>
 
