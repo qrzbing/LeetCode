@@ -22,6 +22,9 @@
 // algorithm
 #include <algorithm>
 
+// std::bind
+#include<functional>
+
 using namespace std;
 
 #endif
