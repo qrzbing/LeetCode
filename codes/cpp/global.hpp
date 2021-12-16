@@ -19,11 +19,14 @@
 #include <unordered_map>
 #include <unordered_set>
 
+// math
+#include <cmath>
+
 // algorithm
 #include <algorithm>
 
 // std::bind
-#include<functional>
+#include <functional>
 
 using namespace std;
 
