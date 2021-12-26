@@ -31,4 +31,14 @@
 
 using namespace std;
 
+template <typename T>
+void cout_vector(vector<T> vec)
+{
+    for (auto num : vec)
+    {
+        cout << num << " ";
+    }
+    cout << "\n";
+}
+
 #endif
