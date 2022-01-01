@@ -41,4 +41,17 @@ void cout_vector(vector<T> vec)
     cout << "\n";
 }
 
+template <typename T>
+void cout_2d_vector(vector<vector<T>> vec)
+{
+    for (vector<T> &sig : vec)
+    {
+        for (T &ele : sig)
+        {
+            cout << ele << " ";
+        }
+        cout << "\n";
+    }
+}
+
 #endif
