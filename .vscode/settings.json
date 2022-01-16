@@ -16,7 +16,8 @@
         "cmath": "cpp",
         "random": "cpp",
         "array": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "cstdlib": "cpp"
     },
     "python.formatting.provider": "autopep8"
 }
