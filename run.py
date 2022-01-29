@@ -13,13 +13,16 @@ def executeCppCode(filename: str, CXX="g++"):
     toExecuteCommand = "{} -g -o bin/test -fsanitize=address -Icodes/include {}".format(
         CXX,
         filePath)
-    print(COLOR_GREEN + "[+] Start execute cpp files: " +
+    print(COLOR_GREEN + "[+] Start compiling cpp files: " +
           COLOR_BLACK + toExecuteCommand)
     val = os.system(toExecuteCommand)
     if val != 0:
         print("[?] Some errors occurred, exit.")
         exit(val)
+    print(COLOR_GREEN + "[+] Start executing: " + COLOR_BLACK + "./bin/test")
     os.system("./bin/test")
+    print(COLOR_GREEN + "[+] Execution finished: " + COLOR_BLACK + "rm ./bin/test")
+    os.system("rm ./bin/test")
 
 
 def executeRustCode(filename):
