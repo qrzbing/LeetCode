@@ -21,12 +21,15 @@ def executeCppCode(filename: str, CXX="g++"):
         exit(val)
     print(COLOR_GREEN + "[+] Start executing: " + COLOR_BLACK + "./bin/test")
     os.system("./bin/test")
-    print(COLOR_GREEN + "[+] Execution finished: " + COLOR_BLACK + "rm ./bin/test")
+    print(COLOR_GREEN + "[+] Execution finished: " +
+          COLOR_BLACK + "rm ./bin/test")
     os.system("rm ./bin/test")
 
 
-def executeRustCode(filename):
-    pass
+def executeRustCode(filename: str):
+    os.chdir("./codes/rust/")
+    print(COLOR_GREEN + "[+] Working dir: " + COLOR_BLACK + os.getcwd())
+    os.system("cargo test test_{}".format(filename))
 
 
 def executeCode(language: str, filename: str):
