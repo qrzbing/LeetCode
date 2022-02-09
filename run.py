@@ -34,7 +34,7 @@ def executeRustCode(filename: str):
 
 def executeCode(language: str, filename: str):
     language = language.lower()
-    if language == "cpp":
+    if language == "cpp" or language == "c++":
         executeCppCode(filename)
     elif language == "py" or language == "python":
         pass
