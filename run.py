@@ -31,13 +31,17 @@ def executeRustCode(filename: str):
     print(COLOR_GREEN + "[+] Working dir: " + COLOR_BLACK + os.getcwd())
     os.system("cargo test test_{}".format(filename))
 
+def executePythonCode(filename: str):
+    os.chdir("./codes/python/")
+    print(COLOR_GREEN + "[+] Working dir: " + COLOR_BLACK + os.getcwd())
+    os.system("python {}.py".format(filename))
 
 def executeCode(language: str, filename: str):
     language = language.lower()
     if language == "cpp" or language == "c++":
         executeCppCode(filename)
     elif language == "py" or language == "python":
-        pass
+        executePythonCode(filename)
     elif language == "rs" or language == "rust":
         executeRustCode(filename)
     else:

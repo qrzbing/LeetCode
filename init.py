@@ -52,6 +52,15 @@ int main ()
         f.write(cpp_main_template)
 
 
+python_solution_template = """
+from typing import List
+
+
+
+if __name__ == '__main__':
+    sol = Solution()
+"""
+
 def initCode(language: str, filename: str):
     language = language.lower()
     if language == "rust":
