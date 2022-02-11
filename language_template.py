@@ -1,0 +1,28 @@
+python_solution_template = """from typing import List
+""" + "\n" * 3 + """
+if __name__ == '__main__':
+    sol = Solution()
+"""
+
+cpp_solution_template = """#include "global.hpp"
+""" + "\n"*3 + """
+int main ()
+{
+    Solution sol;
+
+
+    return 0;
+}
+"""
+
+rust_solution_template = """pub struct Solution {{}}
+""" + "\n" * 3 + """
+#[cfg(test)]
+mod tests {{
+    use super::*;
+    #[test]
+    fn test_{}() {{
+        // assert_eq!();
+    }}
+}}
+"""

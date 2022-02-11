@@ -29,7 +29,7 @@ def executeCppCode(filename: str, CXX="g++"):
 def executeRustCode(filename: str):
     os.chdir("./codes/rust/")
     print(COLOR_GREEN + "[+] Working dir: " + COLOR_BLACK + os.getcwd())
-    os.system("cargo test test_{}".format(filename))
+    os.system("RUST_BACKTRACE=1 cargo test test_{}".format(filename))
 
 def executePythonCode(filename: str):
     os.chdir("./codes/python/")
