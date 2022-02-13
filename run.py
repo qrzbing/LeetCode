@@ -10,7 +10,7 @@ def executeCppCode(filename: str, CXX="g++"):
     if os.path.isfile(filePath) is False:
         print("[!] File: {} not exist, please check the path.".format(filePath))
         exit(0)
-    toExecuteCommand = "{} -g -o bin/test -fsanitize=address -Icodes/include {}".format(
+    toExecuteCommand = "{} -g -o bin/test -std=c++17 -fsanitize=address -Icodes/include {}".format(
         CXX,
         filePath)
     print(COLOR_GREEN + "[+] Start compiling cpp files: " +
