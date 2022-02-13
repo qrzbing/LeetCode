@@ -59,6 +59,7 @@ def initCode(language: str, filename: str):
 
 if __name__ == '__main__':
     # Usage: python init.py rust 1748
+    os.chdir("../")
     language = sys.argv[1].lower()
     filename = sys.argv[2]
     initCode(language, filename)

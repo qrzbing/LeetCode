@@ -50,6 +50,7 @@ def executeCode(language: str, filename: str):
 
 
 if __name__ == '__main__':
+    os.chdir("../")
     if len(sys.argv) < 3:
         print(
             "[!] Arguments less than 2!\n\
