@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 
-run="run"
-init="init"
-
 cd helper/
 exec python $1.py $2 $3
