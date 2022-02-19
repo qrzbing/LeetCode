@@ -52,7 +52,7 @@ def initCode(language: str, filename: str):
     elif language == "cpp":
         initCppCode(filename)
     elif language == "python" or language == "py":
-        pass
+        initPythonCode(filename)
     else:
         exit(0)
 
