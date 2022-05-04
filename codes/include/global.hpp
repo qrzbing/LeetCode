@@ -31,6 +31,9 @@
 // std::bind
 #include <functional>
 
+// assert
+#include <cassert>
+
 using namespace std;
 
 template <typename T>

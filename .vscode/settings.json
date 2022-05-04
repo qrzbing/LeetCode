@@ -17,7 +17,8 @@
         "random": "cpp",
         "array": "cpp",
         "string_view": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "cassert": "cpp"
     },
     "python.formatting.provider": "autopep8"
 }

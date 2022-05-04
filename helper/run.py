@@ -2,8 +2,10 @@ import os
 import sys
 
 COLOR_GREEN = "\033[1;32m"
-COLOR_BLACK = "\033[0m"
+COLOR_ORIGIN = "\033[0m"
 
+def print_green(green_log, origin_log):
+    print(COLOR_GREEN + green_log + COLOR_ORIGIN + origin_log)
 
 def executeCppCode(filename: str, CXX="g++"):
     filePath = current_path + "/codes/cpp/{}.cpp".format(filename)
@@ -13,27 +15,25 @@ def executeCppCode(filename: str, CXX="g++"):
     toExecuteCommand = "{} -g -o bin/test -std=c++17 -fsanitize=address -Icodes/include {}".format(
         CXX,
         filePath)
-    print(COLOR_GREEN + "[+] Start compiling cpp files: " +
-          COLOR_BLACK + toExecuteCommand)
+    print_green("[+] Start compiling cpp files: ", toExecuteCommand)
     val = os.system(toExecuteCommand)
     if val != 0:
         print("[?] Some errors occurred, exit.")
         exit(val)
-    print(COLOR_GREEN + "[+] Start executing: " + COLOR_BLACK + "./bin/test")
+    print_green("[+] Execution start: ", "./bin/test")
     os.system("./bin/test")
-    print(COLOR_GREEN + "[+] Execution finished: " +
-          COLOR_BLACK + "rm ./bin/test")
+    print_green("[+] Execution finish: ", "rm ./bin/test")
     os.system("rm ./bin/test")
 
 
 def executeRustCode(filename: str):
     os.chdir("./codes/rust/")
-    print(COLOR_GREEN + "[+] Working dir: " + COLOR_BLACK + os.getcwd())
+    print_green("[+] Working dir: ", os.getcwd())
     os.system("RUST_BACKTRACE=1 cargo test test_{}".format(filename))
 
 def executePythonCode(filename: str):
     os.chdir("./codes/python/")
-    print(COLOR_GREEN + "[+] Working dir: " + COLOR_BLACK + os.getcwd())
+    print_green("[+] Working dir: ", os.getcwd())
     os.system("python {}.py".format(filename))
 
 def executeCode(language: str, filename: str):
@@ -57,8 +57,7 @@ if __name__ == '__main__':
 [-] Usage: python run.py <language> <problem_i> # (without suffix)")
         exit(0)
     current_path = os.getcwd()
-    print(COLOR_GREEN + "[+] Current working PATH: " +
-          COLOR_BLACK + current_path)
+    print_green("[+] Current working PATH: ", current_path)
     language = sys.argv[1]
     filename = sys.argv[2]
     executeCode(language, filename)
