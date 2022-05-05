@@ -51,7 +51,7 @@ void cout_2d_vector(vector<vector<T>> vec)
 {
     for (vector<T> &sig : vec)
     {
-        for (T &ele : sig)
+        for (auto ele : sig)
         {
             cout << ele << " ";
         }
