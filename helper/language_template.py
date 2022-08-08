@@ -1,6 +1,7 @@
 python_solution_template = """\
 from typing import List
 from collections import defaultdict
+from functools import cmp_to_key
 """ + "\n" * 3 + """
 if __name__ == '__main__':
     sol = Solution()
