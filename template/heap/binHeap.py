@@ -49,3 +49,9 @@ class binHeap:
         while (i > 0):
             self.percDown(i)
             i = i - 1
+            print(self.heapList)
+        return self.heapList
+
+if __name__ == "__main__":
+    bh = binHeap()
+    print(bh.heapify([62, 41, 30, 28, 22, 16, 15, 17, 19, 13]))
