@@ -1,6 +1,6 @@
 python_solution_template = """\
-from typing import List
-from collections import defaultdict
+from typing import List, Optional
+from collections import defaultdict, Counter
 from functools import cmp_to_key
 """ + "\n" * 3 + """
 if __name__ == '__main__':
